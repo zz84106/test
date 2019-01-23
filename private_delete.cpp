@@ -11,8 +11,9 @@ private:
 int main() {
 
   try {
-    PrivateDelete *pd = new PrivateDelete();
-    delete pd;
+    PrivateDelete *pd = new PrivateDelete(); // should fail, but works
+    
+    delete pd; // this fails
   }
   catch (const std::exception &e) {
     cout << "had exception!" << endl;
